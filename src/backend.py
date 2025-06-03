@@ -3,6 +3,8 @@ from typing import Tuple
 from urllib.parse import urlparse
 
 import qrcode
+
+from typing import Tuple
 import requests
 
 
