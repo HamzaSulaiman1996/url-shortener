@@ -5,7 +5,6 @@ from urllib.parse import urlparse
 import qrcode
 
 from typing import Tuple
-
 import requests
 
 
@@ -19,6 +18,7 @@ def check_liveliness(url: str) -> Tuple[bool, str]:
             return (False, f"{response.status_code}")
     except requests.RequestException as e:
         return (False, f"Error accessing website: {str(e)}")
+
 
 def generate_qr(url: str, save_path: Path = Path('qr_code')) -> Path:
 
