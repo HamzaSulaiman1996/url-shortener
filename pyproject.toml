@@ -1,3 +1,19 @@
+[project]
+name = "url-shortener"
+version = "0.1.0"
+description = "A simple URL shortener service"
+authors = [
+    { name = "Hamza Sulaiman", email = "hamza.sulaiman2009@gmail.com"}
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pyshorteners>=1.0.1",
+    "pytest>=8.3.5",
+    "qrcode>=8.2",
+    "streamlit>=1.45.1",
+    "pydantic>=2.11.0",
+]
+
 [tool.black]
 line-length = 120
 target-version = ["py310"]
@@ -11,3 +27,12 @@ line_length = 120
 [tool.pyright]
 exclude = ["**/__pycache__","**/.pre-commit-config.yaml","**/.gitignore"]
 reportMissingTypeStubs = false
+
+[dependency-groups]
+dev = [
+    "black>=25.1.0",
+    "isort>=6.0.0",
+    "pyright>=1.1.289",
+    "pre-commit>=3.2.0",
+    "py-test>=8.3.0",
+]
